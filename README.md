@@ -2,3 +2,4 @@
 
 echo "hency"
 hwpeng update
+hopeng add
