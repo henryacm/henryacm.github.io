@@ -449,7 +449,7 @@ a{
 
 #match-nav-bar {
   width: 100%;
-  margin: 8px auto;
+  margin: 8px;
   background-color: #F25022;
   font-size: 20px;
   line-height: 35px;
@@ -463,10 +463,12 @@ a{
 
 #match-nav-bar a:hover {
   background-color: #444444;
+
 }
 
 #match-nav-bar table thead tr th a {
   display: block;
+  font-size: 22px;
   text-decoration: none;
   color: #dddddd;
 }
@@ -593,6 +595,7 @@ a{
   width: 250px;
   margin-top: 20px;
   border-radius: 0%;
+  height: 170px;
 }
 
 #portfolio-info {
