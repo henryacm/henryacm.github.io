@@ -571,6 +571,7 @@ a{
 
 #portfolio-bio {
   width: 700px;
+  margin-left: -50px;
   padding-left: 0px;
   float: right;
 }
