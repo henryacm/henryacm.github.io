@@ -466,6 +466,7 @@ a{
 }
 
 #match-nav-bar thead tr th a {
+  margin-left: 20px;
   display: block;
   text-decoration: none;
   color: #dddddd;
