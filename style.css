@@ -456,7 +456,7 @@ a{
 }
 
 #match-nav-bar table {
-  width: 1200px;
+  width: 100%;
   margin-left: 20px;
   vertical-align:bottom;
 }
