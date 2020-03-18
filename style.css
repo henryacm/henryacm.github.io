@@ -457,7 +457,7 @@ a{
 
 #match-nav-bar table {
   width: 1000px;
-  margin-left: -200px;
+  margin-left: 20px;
   vertical-align:bottom;
 }
 
@@ -465,7 +465,7 @@ a{
   background-color: #444444;
 }
 
-#match-nav-bar table thead tr th a {
+#match-nav-bar thead tr th a {
   display: block;
   text-decoration: none;
   color: #dddddd;
