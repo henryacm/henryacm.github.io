@@ -499,7 +499,8 @@ a{
 
 #main-wrapper strong{
   font-weight: bold;
-  font-size: 16px;
+  font-size: 3.5;
+  font-face: Arial;
 }
 
 
