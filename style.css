@@ -189,7 +189,10 @@ hr3 {
   display:inline-block;
 }
 
-div{word-break:break-all;} 
+p span 
+{
+    display: block;
+}
 
 /*===============================
 Publication
