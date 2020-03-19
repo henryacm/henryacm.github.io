@@ -189,6 +189,10 @@ hr3 {
   display:inline-block;
 }
 
+div{  
+    word-wrap: break-word;  
+    word-break: normal;  
+}
 
 /*===============================
 Publication
