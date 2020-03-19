@@ -456,7 +456,7 @@ a{
 }
 
 #match-nav-bar table {
-  width: 1000px;
+  width: 1100px;
   vertical-align:bottom;
 }
 
@@ -486,7 +486,7 @@ a{
 
 #main-wrapper{
   background: #fff;
-  width: 960px;
+  width: 1000px;
   /*height: 1200px;*/
   margin: 90px auto 0px;
   bottom: 5px;
