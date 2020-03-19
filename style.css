@@ -87,7 +87,7 @@ table {
   margin:7px 0 0 0;
   float:left;
   width:300px;
-  margin-bottom: -20px
+  margin-bottom: -30px
 }
 .social li{
   text-indent:-9999999px;
@@ -323,7 +323,7 @@ body {
 
 #footer {
     clear:both;
-    width: 990px;
+    text-align:center;
 	height: 100px;
 	padding-top: 10px;
 	font-size: 12px;
@@ -332,6 +332,10 @@ body {
     color: #00BFFF;/* #6d6d6d;*/
 	font-family: Arial, sans-serif;
 	border-top: 7px solid #ececec;
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
 }
 
 .footer-col {
