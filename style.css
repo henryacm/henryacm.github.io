@@ -486,7 +486,7 @@ a{
 
 #main-wrapper{
   background: #fff;
-  width: 1100px;
+  width: 1000px;
   /*height: 1200px;*/
   margin: 90px auto 0px;
   bottom: 5px;
@@ -594,7 +594,7 @@ a{
 #portfolio-photo img {
   width: 250px;
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   border-radius: 0%;
 }
 
