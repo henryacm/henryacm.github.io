@@ -502,6 +502,13 @@ a{
 }
 
 
+#main-wrapper B{
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+
 #main-wrapper2{
   background: #fff;
   width: 960px;
@@ -511,11 +518,12 @@ a{
 }
 
 
-#main-wrapper B{
+#main-wrapper2 B{
   font-weight: bold;
   font-size: 18px;
   font-family: Arial, sans-serif;
 }
+
 
 
 
