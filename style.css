@@ -490,8 +490,6 @@ a{
   /*height: 1200px;*/
   margin: 90px auto 0px;
   bottom: 5px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 
@@ -594,7 +592,6 @@ a{
 #portfolio-photo img {
   width: 250px;
   margin-top: 20px;
-  margin-bottom: 50px;
   border-radius: 0%;
 }
 
