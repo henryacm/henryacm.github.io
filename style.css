@@ -502,6 +502,15 @@ a{
 }
 
 
+#main-wrapper2{
+  background: #fff;
+  width: 960px;
+  /*height: 1200px;*/
+  margin: 90px auto 0px;
+  bottom: 5px;
+}
+
+
 #main-wrapper B{
   font-weight: bold;
   font-size: 18px;
