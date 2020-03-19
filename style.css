@@ -486,12 +486,12 @@ a{
 
 #main-wrapper{
   background: #fff;
-  width: 1000px;
+  width: 960px;
   /*height: 1200px;*/
   margin: 90px auto 0px;
   bottom: 5px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 
