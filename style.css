@@ -140,7 +140,7 @@ table {
 
 #main {
     min-width: 920px;
-    width: 85%;
+    width: 80%;
     max-width: 1400px;
     margin: 0px auto;
     padding-top: 60px;
@@ -186,10 +186,10 @@ h1 {
     top: 0;
     left: 0;
     right: 0;
-    height: 58px;
+    height: 38px;
     font-size: 14px;
     line-height: 58px;
-    background-color: #0052d9;
+    background-color: #FF6701;
     /* border-bottom: 1px solid #ddd; */
     padding: 10px 0 10px 0;
     /* z-index: 1; */
@@ -201,7 +201,7 @@ h1 {
 
 .header-container {
     min-width: 880px;
-    width: 80%;
+    width: 76%;
     max-width: 1350px;
     display: flex;
     justify-content: space-between;
@@ -599,3 +599,4 @@ h3 {
     padding: 10px 0 10px 27px;
     margin-left: 0;
 }
+
