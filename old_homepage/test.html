@@ -1,0 +1,3889 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Dynamic Vision and Learning: Lealtaixe</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+
+        <!-- Bootstrap library -->
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+              integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+              crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+<!--         <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js"></script>
+ -->
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./academicons.min.css"/>
+
+        <!-- Custom -->
+        <link rel="stylesheet" href="./group.css">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="//portal.mytum.de/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//portal.mytum.de/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//portal.mytum.de/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//portal.mytum.de/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="//portal.mytum.de/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="//portal.mytum.de/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="//portal.mytum.de/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="//portal.mytum.de/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="//portal.mytum.de/favicon-48x48.png" sizes="48x48">
+        <link rel="icon" type="image/png" href="//portal.mytum.de/favicon-64x64.png" sizes="64x64">
+        <link rel="icon" type="image/png" href="//portal.mytum.de/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="//portal.mytum.de/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="//portal.mytum.de/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/" style="font-size: 20px;  color: #00A4EF">
+                        <img src="/img/tumlogo_white.png" width="auto" height="30" alt="" style="margin:0px 10px ">
+                        <span class="d-none d-md-inline">Dynamic Vision and Learning Group</span>
+                        <span class="d-inline d-md-none">DVL Group</span>
+                    </a>
+
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                      <div class="navbar-collapse collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            
+                            
+                                
+                                
+
+                                
+                                
+                                
+
+                                <li class="nav-item">
+                                    <a class="nav-link "
+                                    href="/team">
+                                        Team
+                                    </a>
+                                </li>
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                
+
+                                <li class="nav-item">
+                                    <a class="nav-link "
+                                    href="/research/">
+                                        Research
+                                    </a>
+                                </li>
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                
+
+                                <li class="nav-item">
+                                    <a class="nav-link "
+                                    href="/publications">
+                                        Publications
+                                    </a>
+                                </li>
+                                
+                            
+                                
+                                
+                                
+                                
+                                
+                                
+                                <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                     Software
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    
+                                    
+                                    
+                                    
+                                    <li>
+                                        <a class="dropdown-item " href="/code">Code</a>
+                                    </li>
+                                    
+                                    
+                                    
+                                    
+                                    <li>
+                                        <a class="dropdown-item " href="/datasets">Datasets</a>
+                                    </li>
+                                    
+                                </ul>
+                                </li>
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                
+
+                                <li class="nav-item">
+                                    <a class="nav-link "
+                                    href="/teaching">
+                                        Teaching
+                                    </a>
+                                </li>
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                
+
+                                <li class="nav-item">
+                                    <a class="nav-link "
+                                    href="/contact">
+                                        Contact
+                                    </a>
+                                </li>
+                                
+                            
+                        </ul>
+                      </div>
+            </div>
+        </nav>
+
+
+
+        <div class="container">
+
+
+            
+
+            
+
+
+
+         </div>
+
+        <div class="container">
+            <div style="text-align:justify">
+
+<br> 
+<br> 
+<br> 
+<br> 
+</div>
+
+
+
+<div class="row" style="margin-top:10px;margin-bottom:20px;">
+    <h2 class="center"> Laura Leal-Taix&eacute; </h2>
+</div>
+<div class="container">
+<div class="personal row" style="margin-top:10px;margin-bottom:10px;">
+    <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6 col-personal-photo">
+        
+
+
+
+
+
+
+
+
+
+    <a href="/team/lealtaixe"
+       style="text-decoration: none">
+        
+        <img class="rounded-circle profile"
+             height="200px"
+             width="200px"
+             alt="Laura Leal-Taix&eacute;"
+             title="Laura Leal-Taix&eacute;"
+             src="/img/people/lealtaixe.jpg" />
+    
+    </a>
+
+
+    </div>
+    <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6 center" style="width: inherit;">
+        
+        <div class="row col-personal-info"><span class="fa fa-fw fa-profile fa-briefcase"></span>Professor</div>
+        
+        
+        <div class="mail row col-personal-info">
+            <span class="fa fa-fw fa-profile fa-at"></span>
+            <a href="mailto:leal.taixe (at) tum.de">leal.taixe (at) tum.de</a>
+        </div>
+        
+        
+        <div class="row  col-personal-info"><span class="fa fa-fw fa-profile fa-phone"></span>+49-89-289-17786</div>
+        
+        
+        <div class="row  col-personal-info"><span class="fa fa-fw fa-profile fa-home"></span>02.09.043</div>
+        
+        <div class="row  col-personal-info" style="margin-top:10px">
+        
+            <a href="https://scholar.google.es/citations?user=tT2TC-UAAAAJ" target="_blank"><span class="ai ai-link-profile ai-google-scholar-square"></span></a>
+            
+            
+            
+            <a href="https://www.linkedin.com/in/laura-leal-taix%C3%A9-b0361b108/ target="_blank""><span class="fa fa-fw fa-link-profile fa-linkedin-square"></span></a>
+            
+            
+            <a href="https://twitter.com/lealtaixe?lang=en" target="_blank"><span class="fa fa-fw fa-link-profile fa-twitter-square"></span></a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="row row-bio">
+    <h2> Bio </h2>
+</div>
+<div class="row row-bio">
+    <div class="bio">Prof. Dr. Laura Leal-Taixé is a tenure-track professor (W2) at the Technical University of Munich, leading the Dynamic Vision and Learning group. Before that, she spent two years as a postdoctoral researcher at ETH Zurich, Switzerland, and a year as a senior postdoctoral researcher in the Computer Vision Group at the Technical University in Munich. She obtained her PhD from the Leibniz University of Hannover in Germany, spending a year as a visiting scholar at the University of Michigan, Ann Arbor, USA. She pursued B.Sc. and M.Sc. in Telecommunications Engineering at the Technical University of Catalonia (UPC) in her native city of Barcelona. She went to Boston, USA to do her Masters Thesis at Northeastern University with a fellowship from the Vodafone foundation. She is a recipient of the Sofja Kovalevskaja Award of 1.65 million euros for her project socialMaps.</div>
+</div>
+
+
+
+
+<div class="row row-bio author-pubs Leal-Taixe_pub">
+    <h2> Publications </h2>
+    
+<table class="table publications">
+<tbody>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2020</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Athar
+	
+		Mahadevan
+	
+		Osep
+	
+		Leal-Taixe
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/AliSabriARXIV2020.png" alt="PDF"/>
+				<a href="https://arxiv.org/pdf/2003.08429.pdf">STEm-Seg: Spatio-temporal Embeddings for Instance Segmentation in Videos</a>.
+			</span><br />
+			<span class="authors">
+				<i> Ali Athar*, Sabarinath Mahadevan*, Aljosa Osep, Laura Leal-Taixe, and Bastian Leibe (* equal contribution).
+				</i>
+			</span><br />
+			
+				<span class="venue">European Conference on Computer Vision (ECCV)</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/pdf/2003.08429.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Elezi
+	
+		Vascon
+	
+		Torcinovich
+	
+		Pelillo
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/EleVasTorPelLeaArxiv20.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1912.00385">The Group Loss for Deep Metric Learning</a>.
+			</span><br />
+			<span class="authors">
+				<i> Ismail Elezi, Sebastiano Vascon, Alessandro Torcinovich, Marcello Pelillo, and Laura Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">European Conference on Computer Vision (ECCV)</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1912.00385">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Chu
+	
+		Xie
+	
+		Leal-Taixe
+	
+		Thuerey
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/ChuXieLeaThuarxiv2019.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1811.09393">Learning Temporal Coherence via Self-Supervision for GAN-based Video Generation</a>.
+			</span><br />
+			<span class="authors">
+				<i> Mengyu Chu, You Xie, J. Meyer Laura Leal-Taixe, and Nils Thuerey.
+				</i>
+			</span><br />
+			
+				<span class="venue">SIGGRAPH</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1811.09393">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Canameras
+	
+		Schuldt
+	
+		Suyu
+	
+		Taubenberger
+	
+		Meinhardt
+	
+		Leal-Taixe
+	
+		Lemon
+	
+		Rojas
+	
+		Savary
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/holismokes_II.png" alt="PDF"/>
+				<a href="https://arxiv.org/pdf/2004.13048.pdf">HOLISMOKES -- II. Identifying galaxy-scale strong gravitational lenses in Pan-STARRS using convolutional neural networks</a>.
+			</span><br />
+			<span class="authors">
+				<i> Raoul Canameras, Stefan Schuldt, Sherry H. Suyu, Stefan Taubenberger, Tim Meinhardt, Laura Leal-Taixe, Cameron Lemon, K. Rojas, and Elodie Savary.
+				</i>
+			</span><br />
+			
+				<span class="venue">arXiv:2004.13048</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/pdf/2004.13048.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Dendorfer
+	
+		Rezatofighi
+	
+		Milan
+	
+		Shi
+	
+		Cremers
+	
+		Reid
+	
+		Roth
+	
+		Schindler
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/DenRazShiLeaMilSchCreReiRotArxiv2020.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/2003.09003">MOT20: A benchmark for multi object tracking in crowded scenes</a>.
+			</span><br />
+			<span class="authors">
+				<i> Patrick Dendorfer, Hamid Rezatofighi, Anton Milan, Javen Shi, Daniel Cremers, Ian Reid, Stefan Roth, Konrad Schindler, and Laura Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">arXiv:2003.09003</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/2003.09003">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Maximov
+	
+		Galim
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MaxLeaDefocusCVPR20.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/2005.09623">Focus on defocus: bridging the synthetic to real domain gap for depth estimation</a>.
+			</span><br />
+			<span class="authors">
+				<i> Maxim Maximov, Kevin Galim, and Laura Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/2005.09623">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://github.com/dvl-tum/defocus-net">[code]</a>
+			
+			
+			
+			
+			<span class="fa fa-fw fa-video-camera"></span><a target="_blank" href="https://youtu.be/bS8B7gneEm8">[video]</a>
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Maximov
+	
+		Elezi
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MaxEleLeaCIAGANCVPR20.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/2005.09544">CIAGAN: Conditional Identity Anonymization Generative Adversarial Networks</a>.
+			</span><br />
+			<span class="authors">
+				<i> Maxim Maximov*, Ismail Elezi*, and Laura Leal-Taixe (* equal contribution).
+				</i>
+			</span><br />
+			
+				<span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/2005.09544">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://github.com/dvl-tum/ciagan">[code]</a>
+			
+			
+			
+			
+			<span class="fa fa-fw fa-video-camera"></span><a target="_blank" href="https://youtu.be/A6feoh9NLwQ">[video]</a>
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Xu
+	
+		Osep
+	
+		Ban
+	
+		Horaud
+	
+		Leal-Taixe
+	
+		Alameda-Pineda
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/XuOseBanHorLeaAlaArxiv20.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1906.06618">How To Train Your Deep Multi-Object Tracker</a>.
+			</span><br />
+			<span class="authors">
+				<i> Yihong Xu, Aljosa Osep, Yutong Ban, Radu Horaud, Laura Leal-Taixe, and Xavier Alameda-Pineda.
+				</i>
+			</span><br />
+			
+				<span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1906.06618">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Braso
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/BraLeaArxiv20.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1912.07515">Learning a Neural Solver for Multiple Object Tracking</a>.
+			</span><br />
+			<span class="authors">
+				<i> Guillem Braso and Laura Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1912.07515">[pdf]</a>
+			
+			
+			
+			
+			
+			<span class="fa fa-fw fa-video-camera"></span><a target="_blank" href="https://youtu.be/YWEirYMaLWc">[video]</a>
+			
+			
+			
+			<span class="fa fa-fw fa-newspaper-o"></span><a target="_blank" href="https://www.rsipvision.com/ComputerVisionNews-2020July/55/">[CVPR daily]</a>
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Zhou
+	
+		Sattler
+	
+		Pollefeys
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/ZhoSatPolLeaArxiv2019.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1908.01293">To Learn or Not to Learn: Visual Localization from Essential Matrices</a>.
+			</span><br />
+			<span class="authors">
+				<i> Qunjie Zhou, Torsten Sattler, Marc Pollefeys, and Laura Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE International Conference on Robotics and Automation (ICRA)</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1908.01293">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://github.com/GrumpyZhou/visloc-relapose">[code]</a>
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Osep
+	
+		Voigtlaender
+	
+		Weber
+	
+		Luiten
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/OsepFDGVT2019.png" alt="PDF"/>
+				<a href="https://arxiv.org/pdf/1901.09260.pdf">4D Generic Video Object Proposals</a>.
+			</span><br />
+			<span class="authors">
+				<i> Aljosa Osep, Paul Voigtlaender, Mark Weber, Jonathon Luiten, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Robotics and Automation (ICRA)</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/pdf/1901.09260.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Sharma
+	
+		Gold
+	
+		Zurbruegg
+	
+		Leal-Taixe
+	
+		Wegner
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/ShaGolZurLeaWegWACV20.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1912.05227">HistoNet: Predicting size histograms of object instances</a>.
+			</span><br />
+			<span class="authors">
+				<i> Kishan Sharma, Moritz Gold, Christian Zurbruegg, Laura Leal-Taixe, and Jan Wegner.
+				</i>
+			</span><br />
+			
+				<span class="venue">Winter Conference on Applications of Computer Vision (WACV)</span>,
+			
+			
+
+			2020.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1912.05227">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2019</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Bergmann
+	
+		Meinhardt
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/BergmannTrackingBellsWhistles.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1903.05625">Tracking without bells and whistles</a>.
+			</span><br />
+			<span class="authors">
+				<i> Philipp Bergmann*, Tim Meinhardt*, and Laura Leal-Taixe (* equal contribution).
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE International Conference on Computer Vision (ICCV)</span>,
+			
+			
+
+			2019.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1903.05625">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://github.com/phil-bergmann/tracking_wo_bnw">[code]</a>
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Maximov
+	
+		Ritschel
+	
+		Leal-Taixe
+	
+		Fritz
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MaxRitFriLauICCV19.png" alt="PDF"/>
+				<a href="https://arxiv.org/pdf/1804.00863.pdf">Deep Appearance Maps</a>.
+			</span><br />
+			<span class="authors">
+				<i> Maxim Maximov, Tobias Ritschel, Laura Leal-Taixe, and Mario Fritz.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Computer Vision (ICCV)</span>,
+			
+			
+
+			2019.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/pdf/1804.00863.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Khan
+	
+		Wenzel
+	
+		Cremers
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/KhaWenCreLeaIROS2019.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1907.11025">Towards Generalizing Sensorimotor Control Across Weather Conditions</a>.
+			</span><br />
+			<span class="authors">
+				<i> Qadeer Khan, Patrick Wenzel, Daniel Cremers, and Laura Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Intelligent Robots and Systems (IROS)</span>,
+			
+			
+
+			2019.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1907.11025">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Gross
+	
+		Osep
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/GrossAlignNet2019.png" alt="PDF"/>
+				<a href="https://www.vision.rwth-aachen.de/media/papers/189/gross_3dv_2019.pdf">AlignNet-3D for Fast Point Cloud Registration of Partially Observed Objects</a>.
+			</span><br />
+			<span class="authors">
+				<i> Johannes Gross, Aljosa Osep, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on 3D Vision (3DV)</span>,
+			
+			
+
+			2019.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://www.vision.rwth-aachen.de/media/papers/189/gross_3dv_2019.pdf">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://www.vision.rwth-aachen.de/page/alignnet">[code]</a>
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Dendorfer
+	
+		Rezatofighi
+	
+		Milan
+	
+		Shi
+	
+		Cremers
+	
+		Reid
+	
+		Roth
+	
+		Schindler
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/DenRazShiLeaMilSchCreReiRotArxiv2019.png" alt="PDF"/>
+				<a href="http://arxiv.org/abs/1906.04567">CVPR19 Tracking and Detection Challenge: How crowded can it get?</a>.
+			</span><br />
+			<span class="authors">
+				<i> Patrick Dendorfer, Hamid Rezatofighi, Anton Milan, Javen Shi, Daniel Cremers, Ian Reid, Stefan Roth, Konrad Schindler, and Laura Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">arXiv:1906.04567</span>,
+			
+			
+
+			2019.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="http://arxiv.org/abs/1906.04567">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Sattler
+	
+		Zhou
+	
+		Pollefeys
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/SattZhoPolLeaCVPR2019.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1903.07504">Understanding the Limitations of CNN-based Absolute Camera Pose Regression</a>.
+			</span><br />
+			<span class="authors">
+				<i> Torsten Sattler, Qunjie Zhou, Marc Pollefeys, and Laura Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2019.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1903.07504">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Voigtlaender
+	
+		Krause
+	
+		Osep
+	
+		Luiten
+	
+		Sekar
+	
+		Geiger
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/VoigtlaenderMOTS2019.png" alt="PDF"/>
+				<a href="https://arxiv.org/pdf/1902.03604.pdf">MOTS: Multi-Object Tracking and Segmentation</a>.
+			</span><br />
+			<span class="authors">
+				<i> Paul Voigtlaender, Michael Krause, Aljosa Osep, Jonathon Luiten, Berin Balachandar Gnana Sekar, Andreas Geiger, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2019.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/pdf/1902.03604.pdf">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://www.vision.rwth-aachen.de/page/mots">[code]</a>
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Osep
+	
+		Voigtlaender
+	
+		Luiten
+	
+		Breuers
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/OsepVideoMining2019.png" alt="PDF"/>
+				<a href="https://arxiv.org/pdf/1903.00362.pdf">Large-Scale Object Mining for Object Discovery from Unlabeled Video</a>.
+			</span><br />
+			<span class="authors">
+				<i> Aljosa Osep, Paul Voigtlaender, Jonathon Luiten, Stefan Breuers, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Robotics and Automation (ICRA)</span>,
+			
+			
+
+			2019.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/pdf/1903.00362.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Rezatofighi
+	
+		Kaskman
+	
+		Motlagh
+	
+		Shi
+	
+		Cremers
+	
+		Leal-Taixe
+	
+		Reid
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/RezKasMotShiCreLeaReiarxiv2018.png" alt="PDF"/>
+				<a href="https://arxiv.org/pdf/1805.00613.pdf">Deep Perm-Set Net: Learn to Predict Sets with Unknown Permutation and Cardinality Using Deep Neural Networks</a>.
+			</span><br />
+			<span class="authors">
+				<i> S. Hamid Rezatofighi, Roman Kaskman, Farbod T. Motlagh, Qinfeng Shi, Daniel Cremers, Laura Leal-Taixe, and Ian Reid.
+				</i>
+			</span><br />
+			
+				<span class="venue">arxiv:1805.00613</span>,
+			
+			
+
+			2019.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/pdf/1805.00613.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2018</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Ochs
+	
+		Meinhardt
+	
+		Leal-Taixe
+	
+		Moeller
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/ochs_lifting_layers_2018.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1803.08660">Lifting Layers: Analysis and Applications</a>.
+			</span><br />
+			<span class="authors">
+				<i> Peter Ochs, Tim Meinhardt, Laura Leal-Taixe, and Michael Moeller.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE European Conference on Computer Vision (ECCV)</span>,
+			
+			
+
+			2018.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1803.08660">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://github.com/michimoeller/liftingLayers">[code]</a>
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Wenzel
+	
+		Khan
+	
+		Cremers
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/WenKhaCreLeacorl2018.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1807.01001">Modular Vehicle Control for Transferring Semantic Information Between Weather Conditions Using GANs</a>.
+			</span><br />
+			<span class="authors">
+				<i> Patrick Wenzel, Qadeer Khan, Daniel Cremers, and Laura Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">Conference on Robot Learning (CoRL)</span>,
+			
+			
+
+			2018.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1807.01001">[pdf]</a>
+			
+			
+			
+			
+			
+			<span class="fa fa-fw fa-video-camera"></span><a target="_blank" href="https://www.youtube.com/playlist?list=PLbT2smuiIncsR_s9YA6KFpsa8gMwus5u7">[video]</a>
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Hazirbas
+	
+		Leal-Taixe
+	
+		Cremers
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/HazLeaCreArxiv2017.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1704.01085">Deep Depth from Focus</a>.
+			</span><br />
+			<span class="authors">
+				<i> C. Hazirbas, L. Leal-Taixe, and D. Cremers.
+				</i>
+			</span><br />
+			
+				<span class="venue">Asian Conference in Computer Vision (ACCV)</span>,
+			
+			
+
+			2018.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1704.01085">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			<span class="fa fa-fw fa-trophy"></span><a target="_blank" href="https://competitions.codalab.org/competitions/17807">[challenge]</a>
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Meka
+	
+		Maximov
+	
+		Zollhoefer
+	
+		Chatterjee
+	
+		Seidel
+	
+		Richardt
+	
+		Theobalt
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MekMaxZolChaSeiRicTheCVPR2018.png" alt="PDF"/>
+				<a href="https://gvv.mpi-inf.mpg.de/projects/LIME/">LIME: Live Intrinsic Material Estimation</a>.
+			</span><br />
+			<span class="authors">
+				<i> Abhimitra Meka, Maxim Maximov, Michael Zollhoefer, Avishek Chatterjee, Hans-Peter Seidel, Christian Richardt, and Christian Theobalt.
+				</i>
+			</span><br />
+			
+				<span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2018.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://gvv.mpi-inf.mpg.de/projects/LIME/">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Osep
+	
+		Mehner
+	
+		Voigtlaender
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/OsepCAMOT2018.png" alt="PDF"/>
+				<a href="https://arxiv.org/pdf/1712.07920.pdf">Track, then Decide: Category-Agnostic Vision-based Multi-Object Tracking</a>.
+			</span><br />
+			<span class="authors">
+				<i> Aljosa Osep, Wolfgang Mehner, Paul Voigtlaender, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Robotics and Automation (ICRA)</span>,
+			
+			
+
+			2018.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/pdf/1712.07920.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="video_obj_segmentation
+	
+
+	
+	
+		Maninis
+	
+		Caelles
+	
+		Chen
+	
+		Pont-Tuset
+	
+		Leal-Taixe
+	
+		Cremers
+	
+		Gool
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/CaeManPonLeaCreVanCVPR2017.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1709.06031">Video Object Segmentation Without Temporal Information</a>.
+			</span><br />
+			<span class="authors">
+				<i> K.-K. Maninis, S. Caelles, Y. Chen, J. Pont-Tuset, L. Leal-Taixe, D. Cremers, and L. Van Gool.
+				</i>
+			</span><br />
+			
+				<span class="venue">Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</span>,
+			
+			
+
+			2018.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1709.06031">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="transductive
+	
+
+	
+	
+		Laude
+	
+		Lange
+	
+		Schuepfer
+	
+		Domokos
+	
+		Leal-Taixe
+	
+		Schmidt
+	
+		Andres
+	
+		Cremers
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LauLanSchDomLeaSchAndCreArxiv2017.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1705.05020">Discrete-Continuous ADMM for Transductive Inference in Higher-Order MRFs</a>.
+			</span><br />
+			<span class="authors">
+				<i> Emanuel Laude, Jan-Hendrik Lange, Jonas Schuepfer, Csaba Domokos, L. Leal-Taixe, Frank R. Schmidt, Bjoern Andres, and Daniel Cremers.
+				</i>
+			</span><br />
+			
+				<span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2018.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1705.05020">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Henschel
+	
+		Leal-Taixe
+	
+		Cremers
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/HenLeaCreRosArxiv2017.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1705.08314">Fusion of Head and Full-Body Detectors for Multi-Object Tracking</a>.
+			</span><br />
+			<span class="authors">
+				<i> R. Henschel, L. Leal-Taixe, D. Cremers, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">Computer Vision and Pattern Recognition Workshops (CVPRW)</span>,
+			
+			
+
+			2018.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1705.08314">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2017</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="learn_prox_obs
+	
+
+	
+	
+		Meinhardt
+	
+		Moeller
+	
+		Hazirbas
+	
+		Cremers
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MeiMoeHazCreArxiv2017.jpg" alt="PDF"/>
+				<a href="http://arxiv.org/abs/1704.03488">Learning Proximal Operators: Using Denoising Networks for Regularizing Inverse Imaging Problems</a>.
+			</span><br />
+			<span class="authors">
+				<i> Tim Meinhardt, Michael Moeller, Caner Hazirbas, and Daniel Cremers.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE International Conference on Computer Vision (ICCV)</span>,
+			
+			
+
+			2017.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="http://arxiv.org/abs/1704.03488">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://github.com/tum-vision/learn_prox_ops">[code]</a>
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="motchallenge
+	
+
+	
+	
+		Leal-Taixe
+	
+		Milan
+	
+		Schindler
+	
+		Cremers
+	
+		Reid
+	
+		Roth
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaMilSchCreReiRotArxiv2017.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1704.02781">Tracking the Trackers: An Analysis of the State of the Art in Multiple Object Tracking</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, A. Milan, K. Schindler, D. Cremers, I. Reid, and S. Roth.
+				</i>
+			</span><br />
+			
+				<span class="venue">arXiv:1704.02781</span>,
+			
+			
+
+			2017.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1704.02781">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="video_obj_segmentation
+	
+
+	
+	
+		Caelles
+	
+		Maninis
+	
+		Pont-Tuset
+	
+		Leal-Taixe
+	
+		Cremers
+	
+		Gool
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/CaeManPonLeaCreVanCVPR2017.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1611.05198">One-Shot Video Object Segmentation</a>.
+			</span><br />
+			<span class="authors">
+				<i> S. Caelles, K.-K. Maninis, J. Pont-Tuset, L. Leal-Taixe, D. Cremers, and L. Van Gool.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2017.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1611.05198">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://github.com/kmaninis/OSVOS-caffe">[code]</a>
+			
+			
+			
+			
+			
+			
+			<span class="fa fa-fw fa-newspaper-o"></span><a target="_blank" href="https://www.rsipvision.com/CVPR2017-Tuesday/#28">[CVPR daily]</a>
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="localization
+	
+
+	
+	
+		Walch
+	
+		Hazirbas
+	
+		Leal-Taixe
+	
+		Sattler
+	
+		Hilsenbeck
+	
+		Cremers
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/WalHazLeaSatHilCreICCV2017.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1611.07890">Image-based localization using LSTMs for structured feature correlation</a>.
+			</span><br />
+			<span class="authors">
+				<i> F. Walch, C. Hazirbas, L. Leal-Taixe, T. Sattler, S. Hilsenbeck, and D. Cremers.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE International Conference on Computer Vision (ICCV)</span>,
+			
+			
+
+			2017.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1611.07890">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			<span class="fa fa-fw fa-trophy"></span><a target="_blank" href="https://github.com/NavVisResearch/NavVis-Indoor-Dataset/">[challenge]</a>
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Osep
+	
+		Mehner
+	
+		Mathias
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/OsepCIWT2017.png" alt="PDF"/>
+				<a href="https://arxiv.org/pdf/1809.07357.pdf">Combined Image- and World-Space Tracking in Traffic Scenes</a>.
+			</span><br />
+			<span class="authors">
+				<i> Aljosa Osep, Wolfgang Mehner, Markus Mathias, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Robotics and Automation (ICRA)</span>,
+			
+			
+
+			2017.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/pdf/1809.07357.pdf">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://github.com/aljosaosep/ciwt">[code]</a>
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2016</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Henschel
+	
+		Leal-Taixe
+	
+		Rosenhahn
+	
+		Schindler
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/HenLeaRosSchArxiv2016.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1607.07304">Tracking with multi-level features</a>.
+			</span><br />
+			<span class="authors">
+				<i> R. Henschel, L. Leal-Taixe, B. Rosenhahn, and K. Schindler.
+				</i>
+			</span><br />
+			
+				<span class="venue">arXiv:1607.07304</span>,
+			
+			
+
+			2016.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1607.07304">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Leal-Taixe
+	
+		Canton-Ferrer
+	
+		Schindler
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaCanSchCVPRW2016.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1604.07866">Learning by tracking: siamese CNN for robust target association</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, C. Canton-Ferrer, and K. Schindler.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPR). DeepVision: Deep Learning for Computer Vision.</span>,
+			
+			
+
+			2016.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1604.07866">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="motchallenge
+	
+
+	
+	
+		Milan
+	
+		Leal-Taixe
+	
+		Reid
+	
+		Roth
+	
+		Schindler
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MilLeaReiRotSchArxiv2016.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1603.00831">MOT16: A benchmark for multi-object tracking</a>.
+			</span><br />
+			<span class="authors">
+				<i> A. Milan, L. Leal-Taixe, I. Reid, S. Roth, and K. Schindler.
+				</i>
+			</span><br />
+			
+				<span class="venue">arXiv:1603.00831</span>,
+			
+			
+
+			2016.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1603.00831">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			<span class="fa fa-fw fa-trophy"></span><a target="_blank" href="https://motchallenge.net/">[challenge]</a>
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Klostermann
+	
+		Osep
+	
+		Stueckler
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/KlostermannSMP2016.png" alt="PDF"/>
+				<a href="https://www.vision.rwth-aachen.de/media/papers/bmvc16_klostermann_final.pdf">Unsupervised Learning of Shape-Motion Patterns for Objects in Urban Street Scenes</a>.
+			</span><br />
+			<span class="authors">
+				<i> Dirk Klostermann, Aljosa Osep, Joerg Stueckler, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">British Machine Vision Conference (BMVC)</span>,
+			
+			
+
+			2016.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://www.vision.rwth-aachen.de/media/papers/bmvc16_klostermann_final.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Kochanov
+	
+		Osep
+	
+		Stueckler
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/KochanovSFP2016.jpg" alt="PDF"/>
+				<a href="https://www.vision.rwth-aachen.de/media/papers/paper_compressed.pdf">Scene Flow Propagation for Semantic Mapping and Object Discovery in Dynamic Street Scenes</a>.
+			</span><br />
+			<span class="authors">
+				<i> Deyvid Kochanov, Aljosa Osep, Joerg Stueckler, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Intelligent Robots and Systems (IROS)</span>,
+			
+			
+
+			2016.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://www.vision.rwth-aachen.de/media/papers/paper_compressed.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Osep
+	
+		Hermans
+	
+		Engelmann
+	
+		Klostermann
+	
+		
+	
+		Mathias
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/OsepGOP2016.png" alt="PDF"/>
+				<a href="https://www.vision.rwth-aachen.de/media/papers/osep_ICRA16_paper.pdf">Multi-Scale Object Candidates for Generic Object Tracking in Street Scenes</a>.
+			</span><br />
+			<span class="authors">
+				<i> Aljosa Osep, Alexander Hermans, Francis Engelmann, Dirk Klostermann, , Markus Mathias, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Robotics and Automation (ICRA)</span>,
+			
+			
+
+			2016.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://www.vision.rwth-aachen.de/media/papers/osep_ICRA16_paper.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2015</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Fenzi
+	
+		Leal-Taixe
+	
+		Ostermann
+	
+		Tuytelaars
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/FenLeaOstTuyICCV2015.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86bEIzb3NzeHJKRWM">Continuous Pose Estimation with a Spatial Ensemble of Fisher Regressors</a>.
+			</span><br />
+			<span class="authors">
+				<i> M. Fenzi, L. Leal-Taixe, J. Ostermann, and T. Tuytelaars.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE International Conference on Computer Vision (ICCV)</span>,
+			
+			
+
+			2015.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86bEIzb3NzeHJKRWM">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Milan
+	
+		Leal-Taixe
+	
+		Schindler
+	
+		Reid
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MilLeaSchReiCVPR2015.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86S0t6VU82cUFVOG8">Joint Tracking and Segmentation of Multiple Targets</a>.
+			</span><br />
+			<span class="authors">
+				<i> A. Milan, L. Leal-Taixe, K. Schindler, and I. Reid.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2015.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86S0t6VU82cUFVOG8">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://bitbucket.org/amilan/segtracking">[code]</a>
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="motchallenge
+	
+
+	
+	
+		Leal-Taixe
+	
+		Milan
+	
+		Reid
+	
+		Roth
+	
+		Schindler
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaMilReiRotSchArxiv2015.png" alt="PDF"/>
+				<a href="https://arxiv.org/abs/1504.01942">MOTChallenge 2015: Towards a Benchmark for Multi-Target Tracking</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, A. Milan, I. Reid, S. Roth, and K. Schindler.
+				</i>
+			</span><br />
+			
+				<span class="venue">arXiv:1504.01942</span>,
+			
+			
+
+			2015.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://arxiv.org/abs/1504.01942">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			<span class="fa fa-fw fa-trophy"></span><a target="_blank" href="https://motchallenge.net/">[challenge]</a>
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Oliveria
+	
+		Leal-Taixe
+	
+		Feitosa
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/OliLeaFeiRosCMIG2015.png" alt="PDF"/>
+				<a href="http://www.sciencedirect.com/science/article/pii/S0895611115001469">Automatic tracking of vessel-like structures from a single starting point</a>.
+			</span><br />
+			<span class="authors">
+				<i> D.A.B. Oliveria, L. Leal-Taixe, R.Q. Feitosa, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">Computerized Medical Imaging and Graphics</span>,
+			
+			
+
+			2015.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="http://www.sciencedirect.com/science/article/pii/S0895611115001469">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Fenzi
+	
+		Leal-Taixe
+	
+		Schindler
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/FenLeaSchOstWACV2015.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86U1Z2eFJvZW44TXc">Pose Estimation of Object Categories in Videos Using Linear Programming</a>.
+			</span><br />
+			<span class="authors">
+				<i> M. Fenzi, L. Leal-Taixe, K. Schindler, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE Winter Conference on Applications of Computer Vision (WACV)</span>,
+			
+			
+
+			2015.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86U1Z2eFJvZW44TXc">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Mitzel
+	
+		Diesel
+	
+		Osep
+	
+		Rafi
+	
+		Leibe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MitzelGCT2015.png" alt="PDF"/>
+				<a href="https://www.vision.rwth-aachen.de/media/papers/mitzel15icra_3d_shape_representation.pdf">A Fixed-Dimensional 3D Shape Representation for Matching Partially Observed Objects in Street Scenes</a>.
+			</span><br />
+			<span class="authors">
+				<i> Dennis Mitzel, Jasper Diesel, Aljosa Osep, Umer Rafi, and Bastian Leibe.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Robotics and Automation (ICRA)</span>,
+			
+			
+
+			2015.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://www.vision.rwth-aachen.de/media/papers/mitzel15icra_3d_shape_representation.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2014</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Henschel
+	
+		Leal-Taixe
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/HenLeaRosGCPR2014.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86ZW5CSUpOclZBb2M">Efficient multiple people tracking using minimum cost arborescences</a>.
+			</span><br />
+			<span class="authors">
+				<i> R. Henschel, L. Leal-Taixe, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">German Conference on Pattern Recognition (GCPR)</span>,
+			
+			
+
+			2014.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86ZW5CSUpOclZBb2M">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Leal-Taixe
+	
+		Fenzi
+	
+		Kuznetsova
+	
+		Rosenhahn
+	
+		Savarese
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaFenKuzRosSavCVPR2014.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86SGRtUy1iX2hmM1U">Learning an image-based motion context for multiple people tracking</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, M. Fenzi, A. Kuznetsova, B. Rosenhahn, and S. Savarese.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2014.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86SGRtUy1iX2hmM1U">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86NEhVeTNlNWZoQVk">[code]</a>
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/Leal-Taixe-thesis.png" alt="PDF"/>
+				<a href="http://arxiv.org/abs/1411.7935">Multiple object tracking with context awareness</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">PhD Thesis</span>,
+			
+			
+
+			2014.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="http://arxiv.org/abs/1411.7935">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2013</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Fenzi
+	
+		Leal-Taixe
+	
+		Rosenhahn
+	
+		Ostermann
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/FenLeaRosOstCVPR2013.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86cTRnWGFnZ3dCQ1k">Class generative models based on feature regression for pose estimation of object categories</a>.
+			</span><br />
+			<span class="authors">
+				<i> M. Fenzi, L. Leal-Taixe, B. Rosenhahn, and J. Ostermann.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2013.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86cTRnWGFnZ3dCQ1k">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Weinmann
+	
+		Osep
+	
+		Ruiters
+	
+		Klein
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/WeinmannMVNFI2013.png" alt="PDF"/>
+				<a href="https://www.vision.rwth-aachen.de/media/papers/weinmann_reconstruction_of_mirroring_objects_iccv2013.pdf">Multi-View Normal Field Integration for 3D Reconstruction of Mirroring Objects</a>.
+			</span><br />
+			<span class="authors">
+				<i> Michael Weinmann, Aljosa Osep, Roland Ruiters, and Reinhard Klein.
+				</i>
+			</span><br />
+			
+				<span class="venue">International Conference on Computer Vision (ICCV)</span>,
+			
+			
+
+			2013.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://www.vision.rwth-aachen.de/media/papers/weinmann_reconstruction_of_mirroring_objects_iccv2013.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Kuznetsova
+	
+		Leal-Taixe
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/KuzLeaRosICCVW2013.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86R0Rkb0hjS1JodFE">Real-time sign language recognition using a consumer depth camera</a>.
+			</span><br />
+			<span class="authors">
+				<i> A. Kuznetsova, L. Leal-Taixe, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE International Conference on Computer Vision (ICCV) Workshops. 3rd Workshop on Consumer Depth Cameras for Computer Vision (CDC4CV)</span>,
+			
+			
+
+			2013.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86R0Rkb0hjS1JodFE">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Leal-Taixe
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaRosBookChapter2012.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86aWtaeTNoNjJiQ0U">Pedestrian interaction in tracking: the social force model and global optimization methods</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">Modeling, Simulation and Visual Analysis of Crowds: A multidisciplinary perspective</span>,
+			
+			
+				<span class="venue">Springer Berlin Heidelberg</span>,
+			
+
+			2013.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86aWtaeTNoNjJiQ0U">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2012</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Dellaert
+	
+		Frahm
+	
+		Pollefeys
+	
+		Leal-Taixe
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/DelFraPolRosLeaBook2012.png" alt="PDF"/>
+				<a href="http://link.springer.com/book/10.1007%2F978-3-642-34091-8">Outdoor and Large-Scale Real-World Scene Analysis</a>.
+			</span><br />
+			<span class="authors">
+				<i> F. Dellaert, J.-M. Frahm, M. Pollefeys, L. Leal-Taixe, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+			
+				<span class="venue">Springer Berlin Heidelberg</span>,
+			
+
+			2012.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="http://link.springer.com/book/10.1007%2F978-3-642-34091-8">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Fenzi
+	
+		Dragon
+	
+		Leal-Taixe
+	
+		Rosenhahn
+	
+		Ostermann
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/FenDraLeaRosOstDAGM2012.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86c1NwQW43YTU2ZXM">3D Object Recognition and Pose Estimation for Multiple Objects using Multi-Prioritized RANSAC and Model Updating</a>.
+			</span><br />
+			<span class="authors">
+				<i> M. Fenzi, R. Dragon, L. Leal-Taixe, B. Rosenhahn, and J. Ostermann.
+				</i>
+			</span><br />
+			
+				<span class="venue">German Conference on Pattern Recognition (GCPR)</span>,
+			
+			
+
+			2012.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86c1NwQW43YTU2ZXM">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Leal-Taixe
+	
+		Pons-Moll
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaPonRosCVPR2012.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86UDNfUGVoelNzM0k">Branch-and-price global optimization for multi-view multi-target tracking</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, G. Pons-Moll, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</span>,
+			
+			
+
+			2012.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86UDNfUGVoelNzM0k">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86ZVFZcE9PU2FpSE0">[code]</a>
+			
+			
+			
+			<span class="fa fa-fw fa-image"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86T2psZVV3X2k4bFk">[poster]</a>
+			
+			
+			<span class="fa fa-fw fa-video-camera"></span><a target="_blank" href="http://youtu.be/639bh3jVOVU">[video]</a>
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Leal-Taixe
+	
+		Pons-Moll
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaPonRosDagstuhl2012.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86ejhsMzZ2ZDhMSW">Exploiting pedestrian interaction via global optimization and social behaviors</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, G. Pons-Moll, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">Outdoor and Large-Scale Real-World Scene Analysis</span>,
+			
+			
+				<span class="venue">Springer Berlin Heidelberg</span>,
+			
+
+			2012.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86ejhsMzZ2ZDhMSW">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Maleschlijski
+	
+		Sendra
+	
+		Fino
+	
+		Leal-Taixe
+	
+		Thome
+	
+		Terfort
+	
+		Aldred
+	
+		Grunze
+	
+		Clare
+	
+		Rosenhahn
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MalSenDifLeaThoTerAldGruClaRosRosBIO2012.png" alt="PDF"/>
+				<a href="https://www.researchgate.net/publication/230717042_Three_Dimensional_Tracking_of_Exploratory_Behavior_of_Barnacle_Cyprids_Using_Stereoscopy">Three dimensional tracking of exploratory behavior of barnacle cyprids using stereoscopy</a>.
+			</span><br />
+			<span class="authors">
+				<i> S. Maleschlijski, G. H. Sendra, A. Di Fino, L. Leal-Taixe, I. Thome, A. Terfort, N. Aldred, M. Grunze, A. S. Clare, B. Rosenhahn, and A. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">Biointerphases</span>,
+			
+			
+
+			2012.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://www.researchgate.net/publication/230717042_Three_Dimensional_Tracking_of_Exploratory_Behavior_of_Barnacle_Cyprids_Using_Stereoscopy">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Pons-Moll
+	
+		Leal-Taixe
+	
+		Gall
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/PonLeaGalRosDagstuhl12.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86QmFmTkpoVWlsVGs">Data-driven Manifolds for Outdoor Motion Capture</a>.
+			</span><br />
+			<span class="authors">
+				<i> G. Pons-Moll, L. Leal-Taixe, J. Gall, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">Outdoor and Large-Scale Real-World Scene Analysis</span>,
+			
+			
+				<span class="venue">Springer Berlin Heidelberg</span>,
+			
+
+			2012.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86QmFmTkpoVWlsVGs">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Weinmann
+	
+		Ruiters
+	
+		Osep
+	
+		Schwartz
+	
+		Klein
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/WeinmannBMVC2012.jpg" alt="PDF"/>
+				<a href="https://www.vision.rwth-aachen.de/media/papers/weinmann-2012-3DReconstruction.pdf">Fusing Structured Light Consistency and Helmholtz Normals for 3D Reconstruction</a>.
+			</span><br />
+			<span class="authors">
+				<i> Michael Weinmann, Roland Ruiters, Aljosa Osep, Christopher Schwartz, and Reinhard Klein.
+				</i>
+			</span><br />
+			
+				<span class="venue">British Machine Vision Conference (BMVC)</span>,
+			
+			
+
+			2012.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://www.vision.rwth-aachen.de/media/papers/weinmann-2012-3DReconstruction.pdf">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2011</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="mot
+	
+
+	
+	
+		Leal-Taixe
+	
+		Pons-Moll
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaPonRosICCVW2011.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86RXROdThCNEVRRDg">Everybody needs somebody: Modeling social and grouping behavior on a linear programming multiple people tracker</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, G. Pons-Moll, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE International Conference on Computer Vision (ICCV) Workshops. 1st Workshop on Modeling, Simulation and Visual Analysis of Large Crowds</span>,
+			
+			
+
+			2011.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86RXROdThCNEVRRDg">[pdf]</a>
+			
+			
+			<span class="fa fa-fw fa-code"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86Um10ZV9aNXM5Um8">[code]</a>
+			
+			
+			
+			
+			<span class="fa fa-fw fa-video-camera"></span><a target="_blank" href="http://youtu.be/1DP3soJVOck">[video]</a>
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Maleschlijski
+	
+		Leal-Taixe
+	
+		Weisse
+	
+		Fino
+	
+		Aldred
+	
+		Clare
+	
+		Sendra
+	
+		Rosenhahn
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/MalLeaWeiFinAldClaSenRosRos2011.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86OE8ySk13ZjRUdlk">A stereoscopic approach for three dimensional tracking of marine biofouling microorganisms</a>.
+			</span><br />
+			<span class="authors">
+				<i> S. Maleschlijski, L. Leal-Taixe, S. Weisse, A. Di Fino, N. Aldred, A. S. Clare, G. H. Sendra, B. Rosenhahn, and A. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">Microscopic Image Analysis with Applications in Biology (MIAAB)</span>,
+			
+			
+
+			2011.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86OE8ySk13ZjRUdlk">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Pons-Moll
+	
+		Leal-Taixe
+	
+		Truong
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/PonLeaTruRosDAGM2011.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86M0s0LXY1NDNhVm8">Efficient and robust shape matching for model based human motion capture</a>.
+			</span><br />
+			<span class="authors">
+				<i> G. Pons-Moll, L. Leal-Taixe, T. Truong, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">German Conference on Pattern Recognition (GCPR)</span>,
+			
+			
+
+			2011.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86M0s0LXY1NDNhVm8">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Pons-Moll
+	
+		Baak
+	
+		Gall
+	
+		Leal-Taixe
+	
+		Mueller
+	
+		H.-P.Seidel
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/PonBaaGalLeaMueSeiRosICCV2011.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86bkVacVVyN0hsNVE">Outdoor human motion capture using inverse kinematics and von Mises-Fisher sampling</a>.
+			</span><br />
+			<span class="authors">
+				<i> G. Pons-Moll, A. Baak, J. Gall, L. Leal-Taixe, M. Mueller, H.-P.Seidel, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE International Conference on Computer Vision (ICCV)</span>,
+			
+			
+
+			2011.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86bkVacVVyN0hsNVE">[pdf]</a>
+			
+			<span class="fa fa-fw fa-copy"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86bHJHclVyUTRtRzg">[supplementary]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Leal-Taixe
+	
+		Heydt
+	
+		Rosenhahn
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaHeyRosRosVPCV2011.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86cEc1eUlYOXh2MzQ">Understanding what we cannot see: automatic analysis of 4D digital in-line holographic microscopy data</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, M. Heydt, A. Rosenhahn, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">Video Processing and Computational Video</span>,
+			
+			
+				<span class="venue">Springer Berlin Heidelberg</span>,
+			
+
+			2011.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86cEc1eUlYOXh2MzQ">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2010</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Leal-Taixe
+	
+		Heydt
+	
+		Weisse
+	
+		Rosenhahn
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaHeyWeiRosRosDAGM2010.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86NkpNakhwMHZhbVU">Classification of swimming microorganisms motion patterns in 4D digital in-line holography data</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, M. Heydt, S. Weisse, A. Rosenhahn, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">German Conference on Pattern Recognition (GCPR)</span>,
+			
+			
+
+			2010.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86NkpNakhwMHZhbVU">[pdf]</a>
+			
+			
+			
+			
+			
+			<span class="fa fa-fw fa-video-camera"></span><a target="_blank" href="http://youtu.be/y_70plXPww8?attredirects=0">[video]</a>
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+				<span class="pubs-date date">
+
+				<td>
+				<h2>2009</h2>
+				</td>
+				
+				
+				</span>
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Leal-Taixe
+	
+		Heydt
+	
+		Rosenhahn
+	
+		Rosenhahn
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaHeyRosRosWMVC2009.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86NmE3NC1BaXZUa0U">Automatic tracking of swimming microorganisms in 4D digital in-line holography data</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, M. Heydt, A. Rosenhahn, and B. Rosenhahn.
+				</i>
+			</span><br />
+			
+				<span class="venue">IEEE Workshops on Motion and Video Computing (WMVC)</span>,
+			
+			
+
+			2009.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86NmE3NC1BaXZUa0U">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Leal-Taixe
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/Leal-Taixe-thesis.png" alt="PDF"/>
+				<a href="http://upcommons.upc.edu/handle/2099.1/6119">Automatic segmentation of multi-stain histology images of arteries</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe.
+				</i>
+			</span><br />
+			
+				<span class="venue">Master Thesis</span>,
+			
+			
+
+			2009.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="http://upcommons.upc.edu/handle/2099.1/6119">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+
+			
+
+
+	
+	<tr class="
+	
+
+	
+	
+		Leal-Taixe
+	
+		Coskun
+	
+		Rosenhahn
+	
+		Brooks
+	
+	">
+
+		<td class="publication">
+			<span class="pubtitle">
+				<img style="float: left;margin-right: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;width: 150px;height: 150px" src="/img/publications/LeaCosRosBroMED2009.png" alt="PDF"/>
+				<a href="https://drive.google.com/open?id=0B1e2GU8Qot86RXhSdGlZZEplRlE">Automatic segmentation of arteries in multi-stain histology images</a>.
+			</span><br />
+			<span class="authors">
+				<i> L. Leal-Taixe, A. U. Coskun, B. Rosenhahn, and D. Brooks.
+				</i>
+			</span><br />
+			
+				<span class="venue">World Congress on Medical Physics and Biomedical Engineering</span>,
+			
+			
+
+			2009.
+			<br />
+			<span class="fa fa-fw fa-file-pdf-o"></span><a target="_blank" href="https://drive.google.com/open?id=0B1e2GU8Qot86RXhSdGlZZEplRlE">[pdf]</a>
+			
+			
+			
+			
+			
+			
+			
+			</p>
+		<td>
+	</tr>
+	
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+
+            <div class="footer">
+                <p>
+                    <a href="">Chair for Computer Vision and Artificial Intelligence</a>
+                    at the
+                    <a href="http://tum.de/">Technical University of Munich</a>
+                </p>
+            </div>
+
+        </div> <!-- /container -->
+
+        <!-- Support retina images. -->
+        <script type="text/javascript"
+                src="/js/srcset-polyfill.js"></script>
+
+
+        </script>
+    </body>
+</html>
