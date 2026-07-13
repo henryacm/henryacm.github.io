@@ -1,0 +1,47 @@
+baseURL: https://houwenpeng.com/blog/
+locale: en-US
+title: Houwen Peng's Blog
+theme: ["PaperMod"]
+
+canonifyURLs: true
+
+params:
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+
+  homeInfoParams:
+    Title: Houwen Peng's Blog
+    Content: Notes on AI research, engineering, and building.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/penghouwen"
+    - name: x
+      url: "https://x.com/houwen_peng/"
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?hl=zh-CN&user=UYlhQS8AAAAJ"
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /blog/
+      weight: 1
+    - identifier: posts
+      name: Posts
+      url: /blog/posts/
+      weight: 2
+    - identifier: main-site
+      name: Main Site
+      url: https://houwenpeng.com/
+      weight: 3
+
+caches:
+  images:
+    dir: :cacheDir/images
