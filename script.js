@@ -74,10 +74,9 @@ function syncHomepagePublications() {
     var list = preview.querySelector('.dynamic-preview-list');
     var fallbackNote = preview.querySelector('.preview-fallback-note');
     var source = preview.getAttribute('data-source') || './publications.html';
-    var count = Number(preview.getAttribute('data-preview-count') || 5);
 
     return fetchPageDocument(source).then(function (doc) {
-        var sourcePapers = Array.from(doc.querySelectorAll('.research-full .research-proj[data-select="True"]')).slice(0, count);
+        var sourcePapers = Array.from(doc.querySelectorAll('.research-full .research-proj[data-select="True"]'));
         if (sourcePapers.length === 0) return;
 
         if (list) list.innerHTML = '';
@@ -233,7 +232,7 @@ function initPaperFiltering() {
     var selectedCheckbox = document.createElement('input');
     selectedCheckbox.type = 'checkbox';
     selectedCheckbox.id = 'selected-filter';
-    selectedCheckbox.checked = true;
+    selectedCheckbox.checked = false;
     var selectedLabel = document.createElement('label');
     selectedLabel.htmlFor = 'selected-filter';
     selectedLabel.textContent = 'Show Selected Papers';
