@@ -230,6 +230,8 @@ h1 {
     display: flex;
     align-items: center;
     height: 100%;
+    gap: 8px;
+    color: #fff;
 }
 
 #header a {
@@ -604,14 +606,19 @@ h3 {
 /* Split-page navigation and homepage previews */
 
 .header-right {
-    gap: 14px;
+    gap: 8px;
 }
 
 .header-right a {
     font-size: 15px;
 }
 
-.news-preview .showBtn,
+.nav-separator {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1;
+}
+
 .research-preview .paper-filter {
     display: none;
 }
@@ -712,6 +719,35 @@ h3 {
 }
 
 .pub-venue {
+    font-weight: 600;
+}
+
+.pub-highlight {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 6px;
+    border: 1px solid #d9aa5f;
+    border-radius: 3px;
+    background-color: #fff4df;
+    color: #8a5315;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.pub-highlight a {
+    color: inherit;
+}
+
+.publication-note {
+    display: block;
+    margin-top: 7px;
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.55;
+}
+
+.publication-note > a {
     font-weight: 600;
 }
 
