@@ -447,12 +447,8 @@ h3 {
     width: calc(100% - 30px);
     display: grid;
     grid-template-columns: 180px minmax(0, 1fr);
-    grid-template-areas:
-        "thumb title"
-        "thumb meta"
-        "thumb details";
     column-gap: 30px;
-    align-items: start;
+    align-items: center;
     box-sizing: border-box;
     padding: 8px 0 20px;
 }
@@ -463,11 +459,13 @@ h3 {
 
 
 .research-thumb {
-    grid-area: thumb;
-    align-self: center;
     width: 180px;
     margin: 0;
     padding: 0;
+}
+
+.research-content {
+    min-width: 0;
 }
 
 .research-thumb:hover {
@@ -487,14 +485,9 @@ h3 {
 }
 
 .research-proj-title {
-    grid-area: title;
     color: #003373;
     font-size: 16px;
     line-height: 26px;
-}
-
-.research-proj > .paper-meta {
-    grid-area: meta;
 }
 
 .research-proj-title:hover {
@@ -502,7 +495,6 @@ h3 {
 }
 
 .research-proj p {
-    grid-area: details;
     font-size: 14px;
     line-height: 24px;
 }

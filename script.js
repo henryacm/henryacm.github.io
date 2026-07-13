@@ -122,8 +122,9 @@ function scrollToHashTarget() {
 function normalizePublicationMeta() {
     var papers = document.querySelectorAll('.research-proj');
     papers.forEach(function (paper) {
+        var content = ensurePublicationContent(paper);
         if (paper.querySelector('.pub-summary')) return;
-        var p = paper.querySelector('p');
+        var p = content.querySelector('p');
         if (!p) return;
 
         var originalMeta = paper.querySelector('.paper-meta');
@@ -215,6 +216,26 @@ function normalizePublicationMeta() {
             p.appendChild(note);
         });
     });
+}
+
+function ensurePublicationContent(paper) {
+    var children = Array.from(paper.children);
+    var existing = children.find(function (child) {
+        return child.classList.contains('research-content');
+    });
+    if (existing) return existing;
+
+    var thumb = children.find(function (child) {
+        return child.classList.contains('research-thumb');
+    });
+    var content = document.createElement('div');
+    content.className = 'research-content';
+    paper.appendChild(content);
+
+    children.forEach(function (child) {
+        if (child !== thumb) content.appendChild(child);
+    });
+    return content;
 }
 
 function initPaperFiltering() {
