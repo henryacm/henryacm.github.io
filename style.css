@@ -444,9 +444,17 @@ h3 {
 
 .research-proj {
     margin-left: 30px;
-    width: 100%;
-    display: table;
-    padding-bottom: 10px;
+    width: calc(100% - 30px);
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    grid-template-areas:
+        "thumb title"
+        "thumb meta"
+        "thumb details";
+    column-gap: 30px;
+    align-items: start;
+    box-sizing: border-box;
+    padding: 8px 0 20px;
 }
 
 .nonRep {
@@ -455,11 +463,11 @@ h3 {
 
 
 .research-thumb {
+    grid-area: thumb;
+    align-self: center;
     width: 180px;
-    float: left;
-    margin-top: 7px;
-    padding-right: 30px;
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .research-thumb:hover {
@@ -479,9 +487,14 @@ h3 {
 }
 
 .research-proj-title {
+    grid-area: title;
     color: #003373;
     font-size: 16px;
     line-height: 26px;
+}
+
+.research-proj > .paper-meta {
+    grid-area: meta;
 }
 
 .research-proj-title:hover {
@@ -489,6 +502,7 @@ h3 {
 }
 
 .research-proj p {
+    grid-area: details;
     font-size: 14px;
     line-height: 24px;
 }

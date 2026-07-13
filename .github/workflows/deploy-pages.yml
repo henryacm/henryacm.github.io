@@ -46,6 +46,8 @@ jobs:
             --gc \
             --minify
 
+          test -f _site/blog/index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
