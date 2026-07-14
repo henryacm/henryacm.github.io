@@ -140,7 +140,7 @@ table {
 
 #main {
     min-width: 920px;
-    width: 75%;
+    width: 78%;
     max-width: 1400px;
     margin: 0px auto;
     padding-top: 60px;
@@ -201,7 +201,7 @@ h1 {
 
 .header-container {
     min-width: 880px;
-    width: 72%;
+    width: 80%;
     max-width: 1350px;
     display: flex;
     justify-content: space-between;
