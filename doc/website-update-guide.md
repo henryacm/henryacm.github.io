@@ -532,6 +532,12 @@ Then start the local server:
 
 ## 11. Publish Blog Posts
 
+For deployment recovery, manual GitHub Actions reruns, and stuck Pages runs, see:
+
+```text
+doc/blog-deployment-guide.md
+```
+
 Before publishing, make sure the post is not a draft:
 
 ```markdown
