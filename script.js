@@ -16,15 +16,41 @@
     lessNewsBtn.style.display = isExpanded ? 'none' : 'inline-flex';
 }
 
-window.addEventListener('load', function () {
+var sortedPublicationPapers = [];
+
+onReady(function () {
     var previewSync = initHomepagePreviews();
     initNewsToggle();
     normalizePublicationMeta();
     initPaperFiltering();
+    registerServiceWorker();
     Promise.resolve(previewSync).then(function () {
         scrollToHashTarget();
     });
 });
+
+function onReady(callback) {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', callback);
+    } else {
+        callback();
+    }
+}
+
+function registerServiceWorker() {
+    if (!('serviceWorker' in navigator)) return;
+    if (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') return;
+
+    var register = function () {
+        navigator.serviceWorker.register('/sw.js').catch(function () {});
+    };
+
+    if (document.readyState === 'complete') {
+        register();
+    } else {
+        window.addEventListener('load', register);
+    }
+}
 
 
 function initHomepagePreviews() {
@@ -241,7 +267,7 @@ function ensurePublicationContent(paper) {
 function initPaperFiltering() {
     var researchSection = document.querySelector('.research-full');
     if (!researchSection) return;
-    var papers = document.querySelectorAll('.research-proj');
+    var papers = Array.from(researchSection.querySelectorAll('.research-proj'));
     if (papers.length === 0) return;
 
     var filterContainer = document.createElement('div');
@@ -285,8 +311,12 @@ function initPaperFiltering() {
     topicFilter.appendChild(topicSelect);
     row.appendChild(topicFilter);
 
+    sortedPublicationPapers = papers.slice().sort(function (a, b) {
+        return Number(b.getAttribute('data-year') || 0) - Number(a.getAttribute('data-year') || 0);
+    });
+
     var years = new Set();
-    papers.forEach(function (paper) {
+    sortedPublicationPapers.forEach(function (paper) {
         var year = paper.getAttribute('data-year');
         if (year) years.add(year);
     });
@@ -310,6 +340,12 @@ function initPaperFiltering() {
     filterContainer.appendChild(row);
     researchSection.insertBefore(filterContainer, papers[0]);
 
+    var paperFragment = document.createDocumentFragment();
+    sortedPublicationPapers.forEach(function (paper) {
+        paperFragment.appendChild(paper);
+    });
+    researchSection.appendChild(paperFragment);
+
     document.getElementById('year-filter').addEventListener('change', filterPapers);
     document.getElementById('topic-filter').addEventListener('change', filterPapers);
     document.getElementById('selected-filter').addEventListener('change', filterPapers);
@@ -326,10 +362,7 @@ function filterPapers() {
     var yearFilter = yearEl.value;
     var topicFilter = topicEl.value;
     var selectedFilter = selectedEl.checked;
-    var papers = Array.from(document.querySelectorAll('.research-proj'));
-    papers.sort(function (a, b) {
-        return Number(b.getAttribute('data-year') || 0) - Number(a.getAttribute('data-year') || 0);
-    });
+    var papers = sortedPublicationPapers.length ? sortedPublicationPapers : Array.from(document.querySelectorAll('.research-proj'));
     papers.forEach(function (paper) {
         var paperYear = paper.getAttribute('data-year');
         var paperTopics = paper.getAttribute('data-topics') || '';
@@ -339,7 +372,6 @@ function filterPapers() {
         var selectedMatch = (!selectedFilter || isSelected === 'True');
         if (yearMatch && topicMatch && selectedMatch) {
             paper.style.display = '';
-            researchSection.appendChild(paper);
         } else {
             paper.style.display = 'none';
         }
