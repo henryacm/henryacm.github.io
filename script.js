@@ -16,15 +16,41 @@
     lessNewsBtn.style.display = isExpanded ? 'none' : 'inline-flex';
 }
 
-window.addEventListener('load', function () {
+var sortedPublicationPapers = [];
+
+onReady(function () {
     var previewSync = initHomepagePreviews();
     initNewsToggle();
     normalizePublicationMeta();
     initPaperFiltering();
+    registerServiceWorker();
     Promise.resolve(previewSync).then(function () {
         scrollToHashTarget();
     });
 });
+
+function onReady(callback) {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', callback);
+    } else {
+        callback();
+    }
+}
+
+function registerServiceWorker() {
+    if (!('serviceWorker' in navigator)) return;
+    if (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') return;
+
+    var register = function () {
+        navigator.serviceWorker.register('/sw.js').catch(function () {});
+    };
+
+    if (document.readyState === 'complete') {
+        register();
+    } else {
+        window.addEventListener('load', register);
+    }
+}
 
 
 function initHomepagePreviews() {
@@ -74,10 +100,9 @@ function syncHomepagePublications() {
     var list = preview.querySelector('.dynamic-preview-list');
     var fallbackNote = preview.querySelector('.preview-fallback-note');
     var source = preview.getAttribute('data-source') || './publications.html';
-    var count = Number(preview.getAttribute('data-preview-count') || 5);
 
     return fetchPageDocument(source).then(function (doc) {
-        var sourcePapers = Array.from(doc.querySelectorAll('.research-full .research-proj[data-select="True"]')).slice(0, count);
+        var sourcePapers = Array.from(doc.querySelectorAll('.research-full .research-proj[data-select="True"]'));
         if (sourcePapers.length === 0) return;
 
         if (list) list.innerHTML = '';
@@ -123,8 +148,9 @@ function scrollToHashTarget() {
 function normalizePublicationMeta() {
     var papers = document.querySelectorAll('.research-proj');
     papers.forEach(function (paper) {
+        var content = ensurePublicationContent(paper);
         if (paper.querySelector('.pub-summary')) return;
-        var p = paper.querySelector('p');
+        var p = content.querySelector('p');
         if (!p) return;
 
         var originalMeta = paper.querySelector('.paper-meta');
@@ -218,10 +244,30 @@ function normalizePublicationMeta() {
     });
 }
 
+function ensurePublicationContent(paper) {
+    var children = Array.from(paper.children);
+    var existing = children.find(function (child) {
+        return child.classList.contains('research-content');
+    });
+    if (existing) return existing;
+
+    var thumb = children.find(function (child) {
+        return child.classList.contains('research-thumb');
+    });
+    var content = document.createElement('div');
+    content.className = 'research-content';
+    paper.appendChild(content);
+
+    children.forEach(function (child) {
+        if (child !== thumb) content.appendChild(child);
+    });
+    return content;
+}
+
 function initPaperFiltering() {
     var researchSection = document.querySelector('.research-full');
     if (!researchSection) return;
-    var papers = document.querySelectorAll('.research-proj');
+    var papers = Array.from(researchSection.querySelectorAll('.research-proj'));
     if (papers.length === 0) return;
 
     var filterContainer = document.createElement('div');
@@ -233,7 +279,7 @@ function initPaperFiltering() {
     var selectedCheckbox = document.createElement('input');
     selectedCheckbox.type = 'checkbox';
     selectedCheckbox.id = 'selected-filter';
-    selectedCheckbox.checked = true;
+    selectedCheckbox.checked = false;
     var selectedLabel = document.createElement('label');
     selectedLabel.htmlFor = 'selected-filter';
     selectedLabel.textContent = 'Show Selected Papers';
@@ -265,8 +311,12 @@ function initPaperFiltering() {
     topicFilter.appendChild(topicSelect);
     row.appendChild(topicFilter);
 
+    sortedPublicationPapers = papers.slice().sort(function (a, b) {
+        return Number(b.getAttribute('data-year') || 0) - Number(a.getAttribute('data-year') || 0);
+    });
+
     var years = new Set();
-    papers.forEach(function (paper) {
+    sortedPublicationPapers.forEach(function (paper) {
         var year = paper.getAttribute('data-year');
         if (year) years.add(year);
     });
@@ -290,6 +340,12 @@ function initPaperFiltering() {
     filterContainer.appendChild(row);
     researchSection.insertBefore(filterContainer, papers[0]);
 
+    var paperFragment = document.createDocumentFragment();
+    sortedPublicationPapers.forEach(function (paper) {
+        paperFragment.appendChild(paper);
+    });
+    researchSection.appendChild(paperFragment);
+
     document.getElementById('year-filter').addEventListener('change', filterPapers);
     document.getElementById('topic-filter').addEventListener('change', filterPapers);
     document.getElementById('selected-filter').addEventListener('change', filterPapers);
@@ -306,10 +362,7 @@ function filterPapers() {
     var yearFilter = yearEl.value;
     var topicFilter = topicEl.value;
     var selectedFilter = selectedEl.checked;
-    var papers = Array.from(document.querySelectorAll('.research-proj'));
-    papers.sort(function (a, b) {
-        return Number(b.getAttribute('data-year') || 0) - Number(a.getAttribute('data-year') || 0);
-    });
+    var papers = sortedPublicationPapers.length ? sortedPublicationPapers : Array.from(document.querySelectorAll('.research-proj'));
     papers.forEach(function (paper) {
         var paperYear = paper.getAttribute('data-year');
         var paperTopics = paper.getAttribute('data-topics') || '';
@@ -319,7 +372,6 @@ function filterPapers() {
         var selectedMatch = (!selectedFilter || isSelected === 'True');
         if (yearMatch && topicMatch && selectedMatch) {
             paper.style.display = '';
-            researchSection.appendChild(paper);
         } else {
             paper.style.display = 'none';
         }
